@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concern amount:</strong>
+  <%= @course.concern_amount %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @course.avatar %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @course.category_id %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @course.video_url %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

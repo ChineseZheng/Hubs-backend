@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @teacher.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @teacher.name %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @teacher.account %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @teacher.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @teacher.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @teacher.description %>
+</p>
+
+<p>
+  <strong>Upload course id list:</strong>
+  <%= @teacher.upload_course_id_list %>
+</p>
+
+<p>
+  <strong>Concern course id list:</strong>
+  <%= @teacher.concern_course_id_list %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @teacher.school_id %>
+</p>
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>

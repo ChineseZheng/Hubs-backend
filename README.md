@@ -16,6 +16,9 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+cd filepath
+bundle
+rails s -b ip -p port
 
 * Services (job queues, cache servers, search engines, etc.)
 
