@@ -1,0 +1,52 @@
+<%= form_for(api_vi_course) do |f| %>
+  <% if api_vi_course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_vi_course.errors.count, "error") %> prohibited this api_vi_course from being saved:</h2>
+
+      <ul>
+      <% api_vi_course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video_url %>
+    <%= f.text_field :video_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fans_count %>
+    <%= f.number_field :fans_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :uploader_id %>
+    <%= f.number_field :uploader_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

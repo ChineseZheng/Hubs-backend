@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @api_v1_student.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_v1_student.name %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @api_v1_student.account %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @api_v1_student.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @api_v1_student.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @api_v1_student.description %>
+</p>
+
+<p>
+  <strong>Course id list:</strong>
+  <%= @api_v1_student.course_id_list %>
+</p>
+
+<p>
+  <strong>Course progress:</strong>
+  <%= @api_v1_student.course_progress %>
+</p>
+
+<p>
+  <strong>Loading info:</strong>
+  <%= @api_v1_student.loading_info %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_student_path(@api_v1_student) %> |
+<%= link_to 'Back', api_v1_students_path %>

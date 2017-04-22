@@ -1,0 +1,6 @@
+rails g scaffold api/v1/Student avatar:string name:string account:string password:string email:string description:text course_id_list:string  course_progress:string loading_info:string
+rails g scaffold api/v1/School avatar:string name:string account:string password:string email:string description:text student_id_list:string  teacher_id_list:string teacher_count:integer student_count:integer loading_info:string
+rails g scaffold api/v1/Teacher avatar:string name:string account:string password:string email:string description:text school_id:integer student_id_list:string course_id_list:string upload_course_id_list:string loading_info:string
+rails g scaffold api/v1/Parent avatar:string name:string account:string password:string email:string description:text course_id_list:string  children_id_list:string loading_info:string
+rails g scaffold api/v1/Category avatar:string name:string description:text course_count:integer  master_id:integer
+rails g scaffold api/vi/Course avatar:string name:string description:text category:string video_url:string fans_count:integer uploader_id:integer

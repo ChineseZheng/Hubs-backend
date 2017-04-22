@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @api_v1_teacher.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_v1_teacher.name %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @api_v1_teacher.account %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @api_v1_teacher.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @api_v1_teacher.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @api_v1_teacher.description %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @api_v1_teacher.school_id %>
+</p>
+
+<p>
+  <strong>Student id list:</strong>
+  <%= @api_v1_teacher.student_id_list %>
+</p>
+
+<p>
+  <strong>Course id list:</strong>
+  <%= @api_v1_teacher.course_id_list %>
+</p>
+
+<p>
+  <strong>Upload course id list:</strong>
+  <%= @api_v1_teacher.upload_course_id_list %>
+</p>
+
+<p>
+  <strong>Loading info:</strong>
+  <%= @api_v1_teacher.loading_info %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_teacher_path(@api_v1_teacher) %> |
+<%= link_to 'Back', api_v1_teachers_path %>

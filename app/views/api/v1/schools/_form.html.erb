@@ -1,0 +1,72 @@
+<%= form_for(api_v1_school) do |f| %>
+  <% if api_v1_school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_v1_school.errors.count, "error") %> prohibited this api_v1_school from being saved:</h2>
+
+      <ul>
+      <% api_v1_school.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :account %>
+    <%= f.text_field :account %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_id_list %>
+    <%= f.text_field :student_id_list %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teacher_id_list %>
+    <%= f.text_field :teacher_id_list %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teacher_count %>
+    <%= f.number_field :teacher_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_count %>
+    <%= f.number_field :student_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :loading_info %>
+    <%= f.text_field :loading_info %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
