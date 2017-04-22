@@ -1,6 +1,6 @@
-class CreateApiViCourses < ActiveRecord::Migration[5.0]
+class CreateApiV1Courses < ActiveRecord::Migration[5.0]
   def change
-    create_table :api_vi_courses do |t|
+    create_table :api_v1_courses do |t|
       t.string :avatar
       t.string :name
       t.text :description

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @api_v1_course.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_v1_course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @api_v1_course.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @api_v1_course.category %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @api_v1_course.video_url %>
+</p>
+
+<p>
+  <strong>Fans count:</strong>
+  <%= @api_v1_course.fans_count %>
+</p>
+
+<p>
+  <strong>Uploader:</strong>
+  <%= @api_v1_course.uploader_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_course_path(@api_v1_course) %> |
+<%= link_to 'Back', api_v1_courses_path %>

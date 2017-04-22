@@ -1,10 +1,10 @@
-<%= form_for(api_vi_course) do |f| %>
-  <% if api_vi_course.errors.any? %>
+<%= form_for(api_v1_course) do |f| %>
+  <% if api_v1_course.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(api_vi_course.errors.count, "error") %> prohibited this api_vi_course from being saved:</h2>
+      <h2><%= pluralize(api_v1_course.errors.count, "error") %> prohibited this api_v1_course from being saved:</h2>
 
       <ul>
-      <% api_vi_course.errors.full_messages.each do |message| %>
+      <% api_v1_course.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
