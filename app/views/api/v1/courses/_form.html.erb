@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :avatar %>
-    <%= f.text_field :avatar %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :avatar_url %>
+    <%= f.text_field :avatar_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category_id %>
+    <%= f.number_field :category_id %>
   </div>
 
   <div class="field">
@@ -27,23 +32,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.label :instruction %>
+    <%= f.text_area :instruction %>
   </div>
 
   <div class="field">
-    <%= f.label :video_url %>
-    <%= f.text_field :video_url %>
+    <%= f.label :vedio_url %>
+    <%= f.text_field :vedio_url %>
   </div>
 
   <div class="field">
-    <%= f.label :fans_count %>
-    <%= f.number_field :fans_count %>
-  </div>
-
-  <div class="field">
-    <%= f.label :uploader_id %>
-    <%= f.number_field :uploader_id %>
+    <%= f.label :vedio_avatar_url %>
+    <%= f.text_field :vedio_avatar_url %>
   </div>
 
   <div class="actions">

@@ -17,7 +17,7 @@ class Api::V1::CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create api_v1_category" do
     assert_difference('Api::V1::Category.count') do
-      post api_v1_categories_url, params: { api_v1_category: { avatar: @api_v1_category.avatar, course_count: @api_v1_category.course_count, description: @api_v1_category.description, master_id: @api_v1_category.master_id, name: @api_v1_category.name } }
+      post api_v1_categories_url, params: { api_v1_category: { avatar_url: @api_v1_category.avatar_url, description: @api_v1_category.description, instruction: @api_v1_category.instruction, name: @api_v1_category.name } }
     end
 
     assert_redirected_to api_v1_category_url(Api::V1::Category.last)
@@ -34,7 +34,7 @@ class Api::V1::CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update api_v1_category" do
-    patch api_v1_category_url(@api_v1_category), params: { api_v1_category: { avatar: @api_v1_category.avatar, course_count: @api_v1_category.course_count, description: @api_v1_category.description, master_id: @api_v1_category.master_id, name: @api_v1_category.name } }
+    patch api_v1_category_url(@api_v1_category), params: { api_v1_category: { avatar_url: @api_v1_category.avatar_url, description: @api_v1_category.description, instruction: @api_v1_category.instruction, name: @api_v1_category.name } }
     assert_redirected_to api_v1_category_url(@api_v1_category)
   end
 

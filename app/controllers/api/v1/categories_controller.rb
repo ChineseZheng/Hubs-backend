@@ -69,6 +69,6 @@ class Api::V1::CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_v1_category_params
-      params.require(:api_v1_category).permit(:avatar, :name, :description, :course_count, :master_id)
+      params.require(:api_v1_category).permit(:name, :avatar_url, :instruction, :description)
     end
 end

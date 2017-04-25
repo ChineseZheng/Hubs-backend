@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @api_v1_user_to_course.user_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @api_v1_user_to_course.course_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @api_v1_user_to_course.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_to_course_path(@api_v1_user_to_course) %> |
+<%= link_to 'Back', api_v1_user_to_courses_path %>

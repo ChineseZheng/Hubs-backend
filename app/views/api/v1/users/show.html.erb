@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @api_v1_user.avatar_url %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @api_v1_user.account %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_v1_user.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @api_v1_user.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @api_v1_user.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @api_v1_user.phone %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @api_v1_user.description %>
+</p>
+
+<p>
+  <strong>User type:</strong>
+  <%= @api_v1_user.user_type_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_path(@api_v1_user) %> |
+<%= link_to 'Back', api_v1_users_path %>

@@ -24,9 +24,13 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
-    new
+    dashboard                   # mandatory
+    index do 
+      only ['Api::V1::Course','Api::V1::User','Api::V1::Category','Api::V1::Admin','Api::V1::Pending']
+    end                     # mandatory
+    new do
+      only ['Api::V1::User','Api::V1::Course','Api::V1::Category','Api::V1::Admin']
+    end
     export
     bulk_delete
     show

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @api_v1_admin.account %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_v1_admin.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @api_v1_admin.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @api_v1_admin.phone %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @api_v1_admin.password %>
+</p>
+
+<p>
+  <strong>Admin type:</strong>
+  <%= @api_v1_admin.admin_type_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_admin_path(@api_v1_admin) %> |
+<%= link_to 'Back', api_v1_admins_path %>

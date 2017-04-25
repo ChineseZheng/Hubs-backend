@@ -10,163 +10,133 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422053054) do
+ActiveRecord::Schema.define(version: 20170424202309) do
 
-  create_table "api_v1_categories", force: :cascade do |t|
-    t.string   "avatar"
+  create_table "api_v1_admin_types", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
-    t.integer  "course_count"
-    t.integer  "master_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "api_v1_courses", force: :cascade do |t|
-    t.string   "avatar"
-    t.string   "name"
-    t.text     "description"
-    t.string   "category"
-    t.string   "video_url"
-    t.integer  "fans_count"
-    t.integer  "uploader_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "api_v1_parents", force: :cascade do |t|
-    t.string   "avatar"
-    t.string   "name"
-    t.string   "account"
-    t.string   "password"
-    t.string   "email"
-    t.text     "description"
-    t.string   "course_id_list"
-    t.string   "children_id_list"
-    t.string   "loading_info"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  create_table "api_v1_schools", force: :cascade do |t|
-    t.string   "avatar"
-    t.string   "name"
-    t.string   "account"
-    t.string   "password"
-    t.string   "email"
-    t.text     "description"
-    t.string   "student_id_list"
-    t.string   "teacher_id_list"
-    t.integer  "teacher_count"
-    t.integer  "student_count"
-    t.string   "loading_info"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "api_v1_students", force: :cascade do |t|
-    t.string   "avatar"
-    t.string   "name"
-    t.string   "account"
-    t.string   "password"
-    t.string   "email"
-    t.text     "description"
-    t.string   "course_id_list"
-    t.string   "course_progress"
-    t.string   "loading_info"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "api_v1_teachers", force: :cascade do |t|
-    t.string   "avatar"
-    t.string   "name"
-    t.string   "account"
-    t.string   "password"
-    t.string   "email"
-    t.text     "description"
-    t.integer  "school_id"
-    t.string   "student_id_list"
-    t.string   "course_id_list"
-    t.string   "upload_course_id_list"
-    t.string   "loading_info"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  create_table "api_v1_tests", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
+  create_table "api_v1_admins", force: :cascade do |t|
+    t.string   "account"
     t.string   "name"
-    t.text     "description"
-    t.string   "avatar"
-    t.integer  "course_amount"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "password"
+    t.integer  "admin_type_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
-  create_table "courses", force: :cascade do |t|
-    t.integer  "concern_amount"
-    t.string   "avatar"
+  create_table "api_v1_categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "avatar_url"
+    t.text     "instruction"
     t.text     "description"
-    t.integer  "category_id"
-    t.string   "video_url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "parents", force: :cascade do |t|
-    t.string   "avatar"
+  create_table "api_v1_courses", force: :cascade do |t|
     t.string   "name"
+    t.string   "avatar_url"
+    t.integer  "category_id"
     t.text     "description"
-    t.string   "account"
-    t.string   "password"
-    t.string   "email"
-    t.string   "children_id_list"
+    t.text     "instruction"
+    t.string   "vedio_url"
+    t.string   "vedio_avatar_url"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
-  create_table "schools", force: :cascade do |t|
-    t.string   "name"
+  create_table "api_v1_pendings", force: :cascade do |t|
+    t.string   "avatar_url"
     t.string   "account"
+    t.string   "name"
     t.string   "password"
     t.string   "email"
-    t.text     "description"
-    t.string   "teacher_id_list"
-    t.string   "student_id_list"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "phone"
+    t.string   "description"
+    t.integer  "user_type_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string   "name"
-    t.string   "avatar"
-    t.string   "account"
-    t.string   "email"
+  create_table "api_v1_progresses", force: :cascade do |t|
     t.text     "description"
-    t.string   "course_id_list"
-    t.text     "course_progress"
-    t.string   "loading_info"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "teachers", force: :cascade do |t|
-    t.string   "avatar"
+  create_table "api_v1_user_to_categories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "api_v1_user_to_courses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "api_v1_user_to_progresses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "api_v1_user_to_users", force: :cascade do |t|
+    t.integer  "fans_user_id"
+    t.integer  "star_user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "api_v1_user_types", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "api_v1_users", force: :cascade do |t|
+    t.string   "avatar_url"
     t.string   "account"
+    t.string   "name"
     t.string   "password"
     t.string   "email"
-    t.text     "description"
-    t.string   "upload_course_id_list"
-    t.string   "concern_course_id_list"
-    t.integer  "school_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "phone"
+    t.string   "description"
+    t.integer  "user_type_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "version_associations", force: :cascade do |t|
+    t.integer "version_id"
+    t.string  "foreign_key_name", null: false
+    t.integer "foreign_key_id"
+    t.index ["foreign_key_name", "foreign_key_id"], name: "index_version_associations_on_foreign_key"
+    t.index ["version_id"], name: "index_version_associations_on_version_id"
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.string   "item_type",                         null: false
+    t.integer  "item_id",                           null: false
+    t.string   "event",                             null: false
+    t.string   "whodunnit"
+    t.text     "object",         limit: 1073741823
+    t.datetime "created_at"
+    t.text     "object_changes", limit: 1073741823
+    t.integer  "transaction_id"
+    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+    t.index ["transaction_id"], name: "index_versions_on_transaction_id"
   end
 
 end

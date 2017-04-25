@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @api_v1_user_to_category.user_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @api_v1_user_to_category.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_to_category_path(@api_v1_user_to_category) %> |
+<%= link_to 'Back', api_v1_user_to_categories_path %>

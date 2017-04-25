@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  avatar: MyString
   name: MyString
+  avatar_url: MyString
+  category_id: 1
   description: MyText
-  category: MyString
-  video_url: MyString
-  fans_count: 1
-  uploader_id: 1
+  instruction: MyText
+  vedio_url: MyString
+  vedio_avatar_url: MyString
 
 two:
-  avatar: MyString
   name: MyString
+  avatar_url: MyString
+  category_id: 1
   description: MyText
-  category: MyString
-  video_url: MyString
-  fans_count: 1
-  uploader_id: 1
+  instruction: MyText
+  vedio_url: MyString
+  vedio_avatar_url: MyString

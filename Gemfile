@@ -11,6 +11,8 @@ gem 'rails', '~> 5.0.2'
 gem 'bootstrap-sass'
 #CMS
 gem "rails_admin",'~> 1.1.1'
+gem "cancancan"
+gem "paper_trail"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

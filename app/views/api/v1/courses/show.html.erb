@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Avatar:</strong>
-  <%= @api_v1_course.avatar %>
+  <strong>Name:</strong>
+  <%= @api_v1_course.name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @api_v1_course.name %>
+  <strong>Avatar url:</strong>
+  <%= @api_v1_course.avatar_url %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @api_v1_course.category_id %>
 </p>
 
 <p>
@@ -16,23 +21,18 @@
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @api_v1_course.category %>
+  <strong>Instruction:</strong>
+  <%= @api_v1_course.instruction %>
 </p>
 
 <p>
-  <strong>Video url:</strong>
-  <%= @api_v1_course.video_url %>
+  <strong>Vedio url:</strong>
+  <%= @api_v1_course.vedio_url %>
 </p>
 
 <p>
-  <strong>Fans count:</strong>
-  <%= @api_v1_course.fans_count %>
-</p>
-
-<p>
-  <strong>Uploader:</strong>
-  <%= @api_v1_course.uploader_id %>
+  <strong>Vedio avatar url:</strong>
+  <%= @api_v1_course.vedio_avatar_url %>
 </p>
 
 <%= link_to 'Edit', edit_api_v1_course_path(@api_v1_course) %> |

@@ -12,28 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :avatar %>
-    <%= f.text_field :avatar %>
-  </div>
-
-  <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
+    <%= f.label :avatar_url %>
+    <%= f.text_field :avatar_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instruction %>
+    <%= f.text_area :instruction %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :course_count %>
-    <%= f.number_field :course_count %>
-  </div>
-
-  <div class="field">
-    <%= f.label :master_id %>
-    <%= f.number_field :master_id %>
   </div>
 
   <div class="actions">

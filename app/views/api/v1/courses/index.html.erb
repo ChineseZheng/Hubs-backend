@@ -5,13 +5,13 @@
 <table>
   <thead>
     <tr>
-      <th>Avatar</th>
       <th>Name</th>
-      <th>Description</th>
+      <th>Avatar url</th>
       <th>Category</th>
-      <th>Video url</th>
-      <th>Fans count</th>
-      <th>Uploader</th>
+      <th>Description</th>
+      <th>Instruction</th>
+      <th>Vedio url</th>
+      <th>Vedio avatar url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,13 +19,13 @@
   <tbody>
     <% @api_v1_courses.each do |api_v1_course| %>
       <tr>
-        <td><%= api_v1_course.avatar %></td>
         <td><%= api_v1_course.name %></td>
+        <td><%= api_v1_course.avatar_url %></td>
+        <td><%= api_v1_course.category_id %></td>
         <td><%= api_v1_course.description %></td>
-        <td><%= api_v1_course.category %></td>
-        <td><%= api_v1_course.video_url %></td>
-        <td><%= api_v1_course.fans_count %></td>
-        <td><%= api_v1_course.uploader_id %></td>
+        <td><%= api_v1_course.instruction %></td>
+        <td><%= api_v1_course.vedio_url %></td>
+        <td><%= api_v1_course.vedio_avatar_url %></td>
         <td><%= link_to 'Show', api_v1_course %></td>
         <td><%= link_to 'Edit', edit_api_v1_course_path(api_v1_course) %></td>
         <td><%= link_to 'Destroy', api_v1_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

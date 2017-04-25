@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @api_v1_user_to_progress.user_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @api_v1_user_to_progress.course_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @api_v1_user_to_progress.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_to_progress_path(@api_v1_user_to_progress) %> |
+<%= link_to 'Back', api_v1_user_to_progresses_path %>

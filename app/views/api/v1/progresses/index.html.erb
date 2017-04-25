@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Api V1 Progresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_v1_progresses.each do |api_v1_progress| %>
+      <tr>
+        <td><%= api_v1_progress.description %></td>
+        <td><%= link_to 'Show', api_v1_progress %></td>
+        <td><%= link_to 'Edit', edit_api_v1_progress_path(api_v1_progress) %></td>
+        <td><%= link_to 'Destroy', api_v1_progress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Api V1 Progress', new_api_v1_progress_path %>

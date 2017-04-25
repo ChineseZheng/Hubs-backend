@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   namespace :api do
     namespace :v1 do
+      resources :pendings
+      resources :progresses 
+      #resources :admins
       resources :courses
       resources :categories
-      resources :parents
-      resources :teachers
-      resources :schools
-      resources :students
-      resources :tests
+      resources :users,only: [:index, :create, :show, :update, :destroy]
+      resources :user_types
+      resources :user_to_courses
+      resources :user_to_users
+      resources :user_to_progresses
+      resources :user_to_categories
     end
   end
  root 'application#index'

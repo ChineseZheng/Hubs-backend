@@ -1,28 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Avatar:</strong>
-  <%= @api_v1_category.avatar %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @api_v1_category.name %>
 </p>
 
 <p>
+  <strong>Avatar url:</strong>
+  <%= @api_v1_category.avatar_url %>
+</p>
+
+<p>
+  <strong>Instruction:</strong>
+  <%= @api_v1_category.instruction %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @api_v1_category.description %>
-</p>
-
-<p>
-  <strong>Course count:</strong>
-  <%= @api_v1_category.course_count %>
-</p>
-
-<p>
-  <strong>Master:</strong>
-  <%= @api_v1_category.master_id %>
 </p>
 
 <%= link_to 'Edit', edit_api_v1_category_path(@api_v1_category) %> |

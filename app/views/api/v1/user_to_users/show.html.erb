@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fans user:</strong>
+  <%= @api_v1_user_to_user.fans_user_id %>
+</p>
+
+<p>
+  <strong>Star user:</strong>
+  <%= @api_v1_user_to_user.star_user_id %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_to_user_path(@api_v1_user_to_user) %> |
+<%= link_to 'Back', api_v1_user_to_users_path %>

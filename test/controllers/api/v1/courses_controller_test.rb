@@ -17,7 +17,7 @@ class Api::V1::CoursesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create api_v1_course" do
     assert_difference('Api::V1::Course.count') do
-      post api_v1_courses_url, params: { api_v1_course: { avatar: @api_v1_course.avatar, category: @api_v1_course.category, description: @api_v1_course.description, fans_count: @api_v1_course.fans_count, name: @api_v1_course.name, uploader_id: @api_v1_course.uploader_id, video_url: @api_v1_course.video_url } }
+      post api_v1_courses_url, params: { api_v1_course: { avatar_url: @api_v1_course.avatar_url, category_id: @api_v1_course.category_id, description: @api_v1_course.description, instruction: @api_v1_course.instruction, name: @api_v1_course.name, vedio_avatar_url: @api_v1_course.vedio_avatar_url, vedio_url: @api_v1_course.vedio_url } }
     end
 
     assert_redirected_to api_v1_course_url(Api::V1::Course.last)
@@ -34,7 +34,7 @@ class Api::V1::CoursesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update api_v1_course" do
-    patch api_v1_course_url(@api_v1_course), params: { api_v1_course: { avatar: @api_v1_course.avatar, category: @api_v1_course.category, description: @api_v1_course.description, fans_count: @api_v1_course.fans_count, name: @api_v1_course.name, uploader_id: @api_v1_course.uploader_id, video_url: @api_v1_course.video_url } }
+    patch api_v1_course_url(@api_v1_course), params: { api_v1_course: { avatar_url: @api_v1_course.avatar_url, category_id: @api_v1_course.category_id, description: @api_v1_course.description, instruction: @api_v1_course.instruction, name: @api_v1_course.name, vedio_avatar_url: @api_v1_course.vedio_avatar_url, vedio_url: @api_v1_course.vedio_url } }
     assert_redirected_to api_v1_course_url(@api_v1_course)
   end
 
